@@ -1,13 +1,11 @@
 {
     "description": "项目配置文件。",
+    "packOptions": {
+        "ignore": [],
+        "include": []
+    },
     "setting": {
         "urlCheck": true,
-        "coverView": false,
-        "postcss": false,
-        "minified": false,
-        "enhance": false,
-        "showShadowRootInWxmlPanel": false,
-        "packNpmRelationList": [],
         "ignoreUploadUnusedFiles": true,
         "babelSetting": {
             "ignore": [],
@@ -16,15 +14,12 @@
         }
     },
     "compileType": "miniprogram",
+    "libVersion": "2.25.3",
+    "appid": "wx17fcc82fd42b3d76",
+    "projectname": "hmug",
     "condition": {},
     "editorSetting": {
         "tabIndent": "insertSpaces",
         "tabSize": 4
-    },
-    "libVersion": "2.25.3",
-    "packOptions": {
-        "ignore": [],
-        "include": []
-    },
-    "appid": "wx17fcc82fd42b3d76"
+    }
 }
