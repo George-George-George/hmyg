@@ -1430,7 +1430,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"hmug","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_NAME":"hmug","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -2629,62 +2629,28 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 18:
+/***/ 12:
+/*!************************************************!*\
+  !*** D:/vueshizhan/mmug/hmug/filters/index.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.toFixed = toFixed;function toFixed(num) {
+  return Number(num).toFixed(2);
+}
+
+/***/ }),
+
+/***/ 19:
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
   \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! regenerator-runtime */ 19);
-
-/***/ }),
-
-/***/ 19:
-/*!************************************************************!*\
-  !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-// This method of obtaining a reference to the global object needs to be
-// kept identical to the way it is obtained in runtime.js
-var g = (function() {
-  return this || (typeof self === "object" && self);
-})() || Function("return this")();
-
-// Use `getOwnPropertyNames` because not all browsers support calling
-// `hasOwnProperty` on the global `self` object in a worker. See #183.
-var hadRuntime = g.regeneratorRuntime &&
-  Object.getOwnPropertyNames(g).indexOf("regeneratorRuntime") >= 0;
-
-// Save the old regeneratorRuntime in case it needs to be restored later.
-var oldRuntime = hadRuntime && g.regeneratorRuntime;
-
-// Force reevalutation of runtime.js.
-g.regeneratorRuntime = undefined;
-
-module.exports = __webpack_require__(/*! ./runtime */ 20);
-
-if (hadRuntime) {
-  // Restore the original runtime.
-  g.regeneratorRuntime = oldRuntime;
-} else {
-  // Remove the global property added by runtime.js.
-  try {
-    delete g.regeneratorRuntime;
-  } catch(e) {
-    g.regeneratorRuntime = undefined;
-  }
-}
-
+module.exports = __webpack_require__(/*! regenerator-runtime */ 20);
 
 /***/ }),
 
@@ -2720,6 +2686,54 @@ module.exports = g;
 /***/ }),
 
 /***/ 20:
+/*!************************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+// This method of obtaining a reference to the global object needs to be
+// kept identical to the way it is obtained in runtime.js
+var g = (function() {
+  return this || (typeof self === "object" && self);
+})() || Function("return this")();
+
+// Use `getOwnPropertyNames` because not all browsers support calling
+// `hasOwnProperty` on the global `self` object in a worker. See #183.
+var hadRuntime = g.regeneratorRuntime &&
+  Object.getOwnPropertyNames(g).indexOf("regeneratorRuntime") >= 0;
+
+// Save the old regeneratorRuntime in case it needs to be restored later.
+var oldRuntime = hadRuntime && g.regeneratorRuntime;
+
+// Force reevalutation of runtime.js.
+g.regeneratorRuntime = undefined;
+
+module.exports = __webpack_require__(/*! ./runtime */ 21);
+
+if (hadRuntime) {
+  // Restore the original runtime.
+  g.regeneratorRuntime = oldRuntime;
+} else {
+  // Remove the global property added by runtime.js.
+  try {
+    delete g.regeneratorRuntime;
+  } catch(e) {
+    g.regeneratorRuntime = undefined;
+  }
+}
+
+
+/***/ }),
+
+/***/ 21:
 /*!*****************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
   \*****************************************************/
@@ -3451,7 +3465,7 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 21:
+/***/ 22:
 /*!*******************************************!*\
   !*** D:/vueshizhan/mmug/hmug/api/home.js ***!
   \*******************************************/
@@ -3459,7 +3473,7 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.getFloorsList = exports.getNavList = exports.getBanners = void 0;var _request = _interopRequireDefault(__webpack_require__(/*! ../utils/request.js */ 22));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+Object.defineProperty(exports, "__esModule", { value: true });exports.getFloorsList = exports.getNavList = exports.getBanners = void 0;var _request = _interopRequireDefault(__webpack_require__(/*! ../utils/request.js */ 23));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 
 
@@ -3471,7 +3485,7 @@ var getFloorsList = function getFloorsList() {return _request.default.get('home/
 
 /***/ }),
 
-/***/ 22:
+/***/ 23:
 /*!************************************************!*\
   !*** D:/vueshizhan/mmug/hmug/utils/request.js ***!
   \************************************************/
@@ -3479,8 +3493,8 @@ var getFloorsList = function getFloorsList() {return _request.default.get('home/
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _toast = _interopRequireDefault(__webpack_require__(/*! @/utils/toast.js */ 52));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-var Fly = __webpack_require__(/*! flyio/dist/npm/wx */ 23);
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _toast = _interopRequireDefault(__webpack_require__(/*! @/utils/toast.js */ 24));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var Fly = __webpack_require__(/*! flyio/dist/npm/wx */ 25);
 var fly = new Fly();
 
 
@@ -3490,14 +3504,13 @@ fly.config.timeout = 3000;
 //添加请求拦截器
 fly.interceptors.request.use(function (request) {
   //给所有请求添加自定义header
+  _toast.default.loading('123');
   request.headers["X-Tag"] = "flyio";
   //打印出请求体
-  console.log(request.body);
   //终止请求
   //var err=new Error("xxx")
   //err.request=request
   //return Promise.reject(new Error(""))
-
   //可以显式返回request, 也可以不返回，没有返回值时拦截器中默认返回request
   return request;
 });
@@ -3506,6 +3519,7 @@ fly.interceptors.request.use(function (request) {
 fly.interceptors.response.use(
 function (response) {
   //只将请求结果的data字段返回
+  uni.hideToast();
   return response.data;
 },
 function (err) {
@@ -3516,10 +3530,53 @@ function (err) {
 
 
 fly;exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 
-/***/ 23:
+/***/ 24:
+/*!**********************************************!*\
+  !*** D:/vueshizhan/mmug/hmug/utils/toast.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function toast(title) {var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3000;
+  uni.showToast({
+    title: title,
+    icon: 'none',
+    duration: duration });
+
+}
+toast.err = function (title) {var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3000;
+  uni.showToast({
+    title: title,
+    icon: 'error',
+    duration: duration });
+
+};
+toast.success = function (title) {var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3000;
+  uni.showToast({
+    title: title,
+    icon: 'success',
+    duration: duration });
+
+};
+
+toast.loading = function (title) {var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1000;
+  uni.showToast({
+    title: title,
+    icon: 'loading',
+    duration: duration });
+
+};var _default =
+toast;exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 25:
 /*!*******************************************!*\
   !*** ./node_modules/flyio/dist/npm/wx.js ***!
   \*******************************************/
@@ -10317,7 +10374,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"hmug","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_NAME":"hmug","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -10338,14 +10395,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"hmug","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_NAME":"hmug","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"hmug","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_NAME":"hmug","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -10431,7 +10488,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"hmug","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_NAME":"hmug","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -10852,37 +10909,19 @@ internalMixin(Vue);
 
 /***/ }),
 
-/***/ 52:
-/*!**********************************************!*\
-  !*** D:/vueshizhan/mmug/hmug/utils/toast.js ***!
-  \**********************************************/
+/***/ 58:
+/*!********************************************!*\
+  !*** D:/vueshizhan/mmug/hmug/api/goods.js ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function toast(title) {var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3000;
-  uni.showToast({
-    title: title,
-    icon: 'none',
-    duration: duration });
+Object.defineProperty(exports, "__esModule", { value: true });exports.getGoodList = void 0;var _request = _interopRequireDefault(__webpack_require__(/*! ../utils/request.js */ 23));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
-}
-toast.err = function (title) {var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3000;
-  uni.showToast({
-    title: title,
-    icon: 'error',
-    duration: duration });
 
-};
-toast.success = function (title) {var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3000;
-  uni.showToast({
-    title: title,
-    icon: 'success',
-    duration: duration });
 
-};var _default =
-toast;exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+var getGoodList = function getGoodList(data) {return _request.default.get('goods/search', data);};exports.getGoodList = getGoodList;
 
 /***/ })
 

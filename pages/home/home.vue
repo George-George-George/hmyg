@@ -36,14 +36,15 @@
         <view class="floor-img-box">
           <!-- 左侧大图片的盒子 -->
           <navigator class="left-img-box" :url="item.product_list[0].url">
-            <image :src="item.product_list[0].image_src" :style="{width: item.product_list[0].image_width + 'rpx'}"
-              mode="widthFix"></image>
+            <image @click="goGoodList(item.product_list[0].navigator_url)" :src="item.product_list[0].image_src"
+              :style="{width: item.product_list[0].image_width + 'rpx'}" mode="widthFix"></image>
           </navigator>
           <!-- 右侧 4 个小图片的盒子 -->
           <view class="right-img-box">
             <navigator class="right-img-item" v-for="(item2, i2) in item.product_list" :key="i2" v-if="i2 !== 0"
               :url="item2.url">
-              <image :src="item2.image_src" mode="widthFix" :style="{width: item2.image_width + 'rpx'}"></image>
+              <image @click="goGoodList(item2.navigator_url)" :src="item2.image_src" mode="widthFix"
+                :style="{width: item2.image_width + 'rpx'}"></image>
             </navigator>
           </view>
         </view>
@@ -76,6 +77,12 @@
       goDetail(id) {
         uni.navigateTo({
           url: "/subpkg/goods_detail/goods_detail?id=" + id
+        })
+      },
+      goGoodList(url) {
+        console.log(url)
+        uni.navigateTo({
+          url: '/subpkg/goods_list/goodsList?' + url.split('?')[1]
         })
       },
       async NavList() {

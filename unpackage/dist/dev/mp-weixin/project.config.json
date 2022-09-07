@@ -6,7 +6,9 @@
     },
     "setting": {
         "urlCheck": true,
-        "ignoreUploadUnusedFiles": true,
+        "postcss": true,
+        "es6": true,
+        "ignoreUploadUnusedFiles": false,
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
@@ -14,10 +16,27 @@
         }
     },
     "compileType": "miniprogram",
-    "libVersion": "2.25.3",
+    "libVersion": "",
     "appid": "wx17fcc82fd42b3d76",
     "projectname": "hmug",
-    "condition": {},
+    "condition": {
+        "search": {
+            "current": -1,
+            "list": []
+        },
+        "conversation": {
+            "current": -1,
+            "list": []
+        },
+        "game": {
+            "current": -1,
+            "list": []
+        },
+        "miniprogram": {
+            "current": -1,
+            "list": []
+        }
+    },
     "editorSetting": {
         "tabIndent": "insertSpaces",
         "tabSize": 4
